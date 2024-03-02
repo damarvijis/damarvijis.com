@@ -35,3 +35,4 @@ wss.on("connection",  (ws, _req) => {
   })
 })
 
+console.log(test)
