@@ -34,5 +34,3 @@ wss.on("connection",  (ws, _req) => {
     console.log("A client has disconnected")
   })
 })
-
-console.log(test)
