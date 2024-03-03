@@ -6,8 +6,6 @@ app.get("/", (_req, res) => {
 	res.end()
 })
 
-console.log("TEST")
-
 app.get('/users', (_req, res) => {
   res.status(200).write("Ini get users")
 	res.end()
