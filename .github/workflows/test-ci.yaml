@@ -1,0 +1,19 @@
+name: Continuous Integration (Testing) Workflow
+on:
+  pull_request:
+    branches:
+      - master
+jobs:
+  test:
+    name: 'Run unit tests'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: 'Checkout repository'
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+      - name: 'Install Dependencies'
+        run: npm ci
+      - name: 'Run Tests'
+        run: npm run test
