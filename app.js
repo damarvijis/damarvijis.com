@@ -1,8 +1,14 @@
-const http = require('http')
+const express = require('express');
+const app = express();
 
-http.createServer((req, res) => {
-	res.write("Damar first app using VPS!")
+app.get("/", (_req, res) => {
+	res.status(200).write("Damar first app using VPS!")
 	res.end()
-}).listen(3000)
+})
 
-console.log("App running in port 3000")
+app.get('/users', (_req, res) => {
+  res.status(200).write("Ini get users")
+	res.end()
+})
+
+module.exports = app;
